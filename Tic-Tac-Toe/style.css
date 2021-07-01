@@ -1,0 +1,61 @@
+
+	h1 {
+		color: orangered;
+		font-size: 45px;
+	}
+
+	/* 3*3 Grid */
+	input {
+        border-style: unset;
+        background-image: linear-gradient(65deg,rgb(160, 150, 150),rgb(11, 8, 15));
+		width: 80px;
+		height: 52px;
+		margin: auto;
+		border-radius: 6px;
+		font-size: 30px;
+		text-align: center;
+        cursor: pointer;
+        color: lightblue;
+        margin-left: 5px;
+        
+	}
+
+	/* Reset Button */
+	#but {
+		box-sizing: border-box;
+		width: 95px;
+		height: 40px;
+		border-style: unset;
+        border-radius: 6px;
+		background-image:linear-gradient(45deg,rgb(129, 37, 80) ,rgb(36, 31, 32));
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+        margin-bottom: 20px;
+	}
+
+	/* Player turn space */
+	#print {
+		font-family:  sans-serif;
+		color: white;
+		font-weight: bold;
+        letter-spacing: 1px;
+	}
+
+	/* Main Contianer */
+	#main {
+        width: 80%;
+        background-image: linear-gradient(65deg,black,rgb(11, 8, 15));
+		text-align: center;
+        margin: auto;
+	}
+
+	/* Game Instruction Text */
+	#ins {
+			
+		color: white;
+		font-size: 20px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+	}
+
