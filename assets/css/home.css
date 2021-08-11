@@ -79,9 +79,14 @@ body{
     width: 33%;
     height: 67%;
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 5px; 
+
     background-color: red;
     cursor: pointer;
+}
+#delete a{
+    text-decoration: none;
+    color: black;
 }
 #delete :hover{
   color: white;
@@ -90,33 +95,29 @@ body{
     width: 400px;
     max-height: 300px;
     /* display: flex; */
+    text-transform: capitalize;
     overflow-y: auto;
     overflow-x: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.show-list{
+    position: relative;
+    left: -39px;
+    width: 111%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2px;
+    background-color: white;
+    overflow: hidden;
+}
+.mark{
+    width: 20px;
+    height: 20px;
+    background-color: teal;
+    border-radius: 3px;
+}
+#show-todo ul li{
+  list-style: none;
+}

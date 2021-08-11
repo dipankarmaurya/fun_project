@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/01852a2733.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/home.css">
-</head>
-<body>
-  
-    <div id ="container">
-        <div class="box" id="heading"><h1><i class="fas fa-clipboard-list"></i>&NoBreak; TODO App</h1></div>
-            <form action="" method=""  >
-                <div class="box  todo">
-                  <input type="text" placeholder="Enter todo work" required>
-                </div>
-                <div class="box date-and-category" > 
-                  <select name="category" id="category" aria-placeholder="category">
-                    <option >Choose a category</option>
-                    <option value="personal">Personal</option>
-                    <option value="work">Work</option>
-                    <option value="school">School</option>
-                    <option value="social">Social</option>
-                    <option value="fun">Fun</option>
-                   </select>
-                  <input type="date" id =date> 
-                </div>
-                <div class="box add-delete" >
-                    <button type="submit">
-                        <h2><i class="fas fa-plus-square"></i> Add Task</h2>
-                    </button>
-                    <div id ="delete">
-                        <h3>
-                            <i class =" fas fa-trash"></i>&NoBreak; Delete
-                        </h3>
-                    </div>
-                </div>
-            </form>
-            <div id="show-todo">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+    <script
+      src="https://kit.fontawesome.com/01852a2733.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="box" id="heading">
+        <h1><i class="fas fa-clipboard-list"></i>&NoBreak; TODO App</h1>
+      </div>
+      <form action="/create-todo" method="POST">
+        <div class="box todo">
+          <input
+            type="text"
+            name="work"
+            placeholder="Enter todo work"
+            required
+          />
+        </div>
+        <div class="box date-and-category">
+          <select name="category" id="category" aria-placeholder="category">
+            <option>Choose a category</option>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="school">School</option>
+            <option value="social">Social</option>
+            <option value="fun">Fun</option>
+          </select>
+          <input type="date" name="date" id="date" />
+        </div>
+        <div class="box add-delete">
+          <button type="submit">
+            <h2><i class="fas fa-plus-square"></i> Add Task</h2>
+          </button>
+          <div id="delete">
+           <a href="/delete-todo/?&id=60e334b784769b1a50f7b4fc"><h3><i class="fas fa-trash"></i>&NoBreak; Delete</h3></a>
+          </div>
+        </div>
+      </form>
 
-            </div>
-            
-
+      <div id="show-todo">
+        <ul>
+          <% for( var i of todos_list){%>
+          <div class="show-list">
+              <div class="mark"></div>
+            <li><%= i.work%></li>
+            <li><%= i.category%></li>
+          </div>
+          <%}%>
+        </ul>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
